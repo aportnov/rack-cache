@@ -70,6 +70,7 @@ def need_memcache(forwhat)
 end
 
 def need_java(forwhat)
+  
   if RUBY_PLATFORM =~ /java/
     yield
   else

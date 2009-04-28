@@ -205,12 +205,14 @@ describe 'Rack::Cache::EntityStore' do
     module Rack::Cache::AppEngine
       module MC
         class << (Service = {})
+ 
           def contains(key); include?(key); end
           def get(key); self[key]; end;
           def put(key, value, ttl = nil)
             self[key] = value
           end  
         end
+        
       end
     end
     
