@@ -30,6 +30,7 @@ Gem::Specification.new do |s|
     example/sinatra/app.rb
     example/sinatra/views/index.erb
     lib/rack/cache.rb
+    lib/rack/cache/appengine.rb
     lib/rack/cache/cachecontrol.rb
     lib/rack/cache/context.rb
     lib/rack/cache/entitystore.rb
