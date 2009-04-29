@@ -31,7 +31,7 @@ module Rack::Cache::AppEngine
   
       def put(key, value, ttl = nil)
         expiration = ttl ? MC::Expiration.byDeltaSeconds(ttl) : nil
-        value = Base64.encode64(Marshal.dump(value))
+        value = Base64.encode64(Marshal.dump(value)).gsub(/\n/, '')
         MC::Service.put(key, value, expiration)
       end
   
